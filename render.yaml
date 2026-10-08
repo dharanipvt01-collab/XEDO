@@ -13,10 +13,7 @@ services:
         generateValue: true
       - key: CORS_ORIGINS
         value: https://xedo-frontend.onrender.com
-      - key: DATABASE_URL
-        fromDatabase:
-          name: xedo-db
-          property: connectionString
+      
 
   - type: web
     name: xedo-frontend
@@ -35,7 +32,3 @@ services:
         source: /*
         destination: /index.html
 
-databases:
-  - name: xedo-db
-    databaseName: xedo
-    user: xedo
